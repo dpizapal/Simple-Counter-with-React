@@ -3,10 +3,10 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 //include bootstrap npm library into the bundle
-import "bootstrap";
+
 
 //include your index.scss file into the bundle
-import "../styles/index.scss";
+import "../styles/index.css";
 
 //import your own components
 //import { Home } from "./component/home.js";
@@ -32,12 +32,21 @@ function SecondsCounter() {
 }
 let digitcounter = 0;
 setInterval(function() {
-	digitone = Math.floor((digitcounter / 100000) % 10);
+	/*digitone = Math.floor((digitcounter / 100000) % 10);
 	digittwo = Math.floor((digitcounter / 10000) % 10);
-	digitthree = Math.floor((digitcounter / 1000) % 10);
-	digitfour = Math.floor((digitcounter / 100) % 10);
+	digitthree = Math.floor((digitcounter / 600) % 10);
+	digitfour = Math.floor(((digitcounter / 60)-60) % 10);
 	digitfive = Math.floor((digitcounter / 10) % 10);
-	digitsix = Math.floor((digitcounter / 1) % 10);
+	digitsix = Math.floor((digitcounter / 1) % 10);*/
+	let horas = Math.floor(digitcounter / 3600);
+	let minutos = Math.floor(digitcounter / 60);
+	let segundos = digitcounter % 60;
+	digitone = Math.floor(horas / 10);
+	digittwo = horas % 10;
+	digitthree = Math.floor(minutos/10);
+	digitfour = minutos % 10;
+	digitfive = Math.floor(segundos / 10);
+	digitsix = segundos % 10 ;
 	digitcounter++;
 	//console.log(digitone, digittwo, digitthree, digitfour, digitfive, digitsix);
 	ReactDOM.render(
