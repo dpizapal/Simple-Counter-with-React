@@ -22,8 +22,10 @@ function SecondsCounter() {
 				</div>
 				<div>{digitone}</div>
 				<div>{digittwo}</div>
+				<div>:</div>
 				<div>{digitthree}</div>
 				<div>{digitfour}</div>
+				<div>:</div>
 				<div>{digitfive}</div>
 				<div>{digitsix}</div>
 			</div>
@@ -32,12 +34,6 @@ function SecondsCounter() {
 }
 let digitcounter = 0;
 setInterval(function() {
-	/*digitone = Math.floor((digitcounter / 100000) % 10);
-	digittwo = Math.floor((digitcounter / 10000) % 10);
-	digitthree = Math.floor((digitcounter / 600) % 10);
-	digitfour = Math.floor(((digitcounter / 60)-60) % 10);
-	digitfive = Math.floor((digitcounter / 10) % 10);
-	digitsix = Math.floor((digitcounter / 1) % 10);*/
 	let horas = Math.floor(digitcounter / 3600);
 	let minutos = Math.floor(digitcounter / 60);
 	let segundos = digitcounter % 60;
