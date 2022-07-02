@@ -5,7 +5,7 @@
     text-align: center;
     padding: 10px;
     background: black;
-    color: white;
+    color: greenyellow;
 }
 
 .counter div{
@@ -13,11 +13,12 @@
     background: #2c2c2c;
     padding: 20px;
     margin: 1px;
-    font-size: 40px;
-    font-family: 'Squada One', cursive;
+    font-size: 70px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: 800;
+    
 }
 
 i.fa-clock:before {
-    font-size: 40px;
+    font-size: 70px;
 }
